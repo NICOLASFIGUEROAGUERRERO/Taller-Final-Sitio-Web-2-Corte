@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutas de Nariño – Galería animada</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Pantalla de carga con el logo animado -->
+  <div id="loader">
+    <div class="loader-contenido">
+      <div id="logoTexto">Rutas de Nariño</div>
+      <div class="loader-linea"></div>
+    </div>
+  </div>
+
+  <header>
+    <h1>Descubre el sur de Colombia</h1>
+    <nav class="filtros" aria-label="Filtros por categoría">
+      <button class="filtro activo" data-filtro="todos">Todos</button>
+      <button class="filtro" data-filtro="lagos">Lagos</button>
+      <button class="filtro" data-filtro="montana">Montaña</button>
+      <button class="filtro" data-filtro="cultura">Cultura</button>
+      <button class="filtro" data-filtro="ciudad">Ciudad</button>
+    </nav>
+  </header>
+
+  <main class="grid">
+    <article class="card" data-cat="lagos">
+      <span class="icono">🌊</span>
+      <h2>Laguna de la Cocha</h2>
+      <p>Gran laguna andina cerca de Pasto, ideal para paseos en lancha.</p>
+      <button class="fav" aria-label="Marcar como favorito">♡</button>
+    </article>
+    <article class="card" data-cat="montana">
+      <span class="icono">⛰️</span>
+      <h2>Volcán Galeras</h2>
+      <p>Volcán activo que domina el paisaje de la ciudad de Pasto.</p>
+      <button class="fav" aria-label="Marcar como favorito">♡</button>
+    </article>
+    <article class="card" data-cat="cultura">
+      <span class="icono">⛪</span>
+      <h2>Santuario de Las Lajas</h2>
+      <p>Santuario neogótico construido sobre un cañón, en Ipiales.</p>
+      <button class="fav" aria-label="Marcar como favorito">♡</button>
+    </article>
+    <article class="card" data-cat="ciudad">
+      <span class="icono">🏙️</span>
+      <h2>Centro histórico de Pasto</h2>
+      <p>Plazas, iglesias y calles para recorrer a pie.</p>
+      <button class="fav" aria-label="Marcar como favorito">♡</button>
+    </article>
+    <article class="card" data-cat="lagos">
+      <span class="icono">💧</span>
+      <h2>Laguna Verde (Azufral)</h2>
+      <p>Laguna de cráter en el volcán Azufral, cerca de Túquerres.</p>
+      <button class="fav" aria-label="Marcar como favorito">♡</button>
+    </article>
+    <article class="card" data-cat="cultura">
+      <span class="icono">🎭</span>
+      <h2>Carnaval de Negros y Blancos</h2>
+      <p>Fiesta tradicional de Pasto que se celebra cada enero.</p>
+      <button class="fav" aria-label="Marcar como favorito">♡</button>
+    </article>
+  </main>
+
+  <p class="ayuda">Teclas <kbd>1</kbd>–<kbd>5</kbd> para filtrar · <kbd>Esc</kbd> muestra todo</p>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

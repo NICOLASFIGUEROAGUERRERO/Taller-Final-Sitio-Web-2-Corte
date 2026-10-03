@@ -1,0 +1,64 @@
+:root {
+  --color-fondo: #0b1d1a;
+  --color-superficie: #12302b;
+  --color-acento: #2dd4a7;
+  --color-texto: #e8fff8;
+  --fuente: "Poppins", "Segoe UI", sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--fuente); background: var(--color-fondo); color: var(--color-texto); }
+header, section, footer { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; text-align: center; }
+h1 { font-size: 2.6rem; color: var(--color-acento); }
+h2 { margin-bottom: 1.5rem; }
+p { margin: 1rem 0 1.5rem; color: #a7d8cb; }
+footer { font-size: .85rem; color: #6fb5a3; }
+
+/* ===== COMPONENTE 1: BOTÓN ===== */
+/* AUTOR: (completar)   ENLACE: (completar enlace de uiverse.io) */
+.uv-btn {
+  padding: .9rem 2rem; border: 2px solid var(--color-acento); border-radius: 999px;
+  background: transparent; color: var(--color-acento); font: 600 1rem var(--fuente);
+  cursor: pointer; transition: all .3s;
+}
+.uv-btn:hover { background: var(--color-acento); color: var(--color-fondo); box-shadow: 0 0 20px var(--color-acento); }
+
+/* ===== COMPONENTE 2: CARD ===== */
+/* AUTOR: (completar)   ENLACE: (completar) */
+.tarjetas { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+.uv-card {
+  width: 260px; padding: 1.8rem; border-radius: 16px; background: var(--color-superficie);
+  border: 1px solid #1f4a42; transition: transform .3s;
+}
+.uv-card:hover { transform: translateY(-8px); }
+.uv-card h3 { color: var(--color-acento); }
+.uv-card .precio { font-size: 2rem; font-weight: 700; margin: 1rem 0; }
+
+/* ===== COMPONENTE 3: INPUT ===== */
+/* AUTOR: (completar)   ENLACE: (completar) */
+.uv-input-grupo { position: relative; max-width: 320px; margin: 0 auto 1.5rem; }
+.uv-input {
+  width: 100%; padding: .9rem 1rem; border-radius: 10px; border: 2px solid #1f4a42;
+  background: var(--color-superficie); color: var(--color-texto); font: 1rem var(--fuente); outline: none;
+}
+.uv-input:focus { border-color: var(--color-acento); }
+.uv-input-grupo label {
+  position: absolute; left: 1rem; top: .9rem; color: #6fb5a3; pointer-events: none; transition: all .2s;
+}
+.uv-input:focus + label, .uv-input:not(:placeholder-shown) + label {
+  top: -.7rem; left: .8rem; font-size: .75rem; padding: 0 .4rem;
+  background: var(--color-fondo); color: var(--color-acento);
+}
+
+/* ===== COMPONENTE 4: TOGGLE ===== */
+/* AUTOR: (completar)   ENLACE: (completar) */
+.selector-plan { margin-bottom: 2rem; }
+.selector-plan span { margin: 0 .6rem; }
+.uv-switch { position: relative; display: inline-block; width: 54px; height: 28px; vertical-align: middle; }
+.uv-switch input { opacity: 0; width: 0; height: 0; }
+.uv-slider { position: absolute; inset: 0; background: #1f4a42; border-radius: 28px; cursor: pointer; transition: .3s; }
+.uv-slider::before {
+  content: ""; position: absolute; width: 22px; height: 22px; left: 3px; top: 3px;
+  background: var(--color-texto); border-radius: 50%; transition: .3s;
+}
+.uv-switch input:checked + .uv-slider { background: var(--color-acento); }
+.uv-switch input:checked + .uv-slider::before { transform: translateX(26px); }

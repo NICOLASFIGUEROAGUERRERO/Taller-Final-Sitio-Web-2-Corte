@@ -1,0 +1,54 @@
+:root {
+  --fondo: #fdf6ec;
+  --tinta: #2b2118;
+  --acento: #c2410c;
+  --superficie: #ffffff;
+  --borde: #ead9c3;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Segoe UI", Arial, sans-serif; background: var(--fondo); color: var(--tinta);
+  min-height: 100vh; display: flex; flex-direction: column; align-items: center;
+  gap: 1.8rem; padding: 3rem 1rem;
+}
+
+/* ---------- Loader ---------- */
+#loader {
+  position: fixed; inset: 0; z-index: 50; background: var(--tinta);
+  display: flex; align-items: center; justify-content: center;
+}
+.loader-contenido { text-align: center; }
+#logoTexto { font-size: 3rem; font-weight: 800; color: var(--fondo); letter-spacing: 2px; }
+.letra { display: inline-block; opacity: 0; }       /* oculta hasta que Anime.js las muestre */
+.loader-linea { height: 4px; width: 0; margin: 1rem auto 0; background: var(--acento); border-radius: 4px; }
+
+/* ---------- Encabezado y filtros ---------- */
+header { text-align: center; }
+h1 { font-size: 1.8rem; margin-bottom: 1.2rem; }
+.filtros { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+.filtro {
+  padding: .5rem 1.1rem; border: 2px solid var(--acento); border-radius: 999px;
+  background: transparent; color: var(--acento); font-weight: 600; cursor: pointer; transition: background .2s, color .2s;
+}
+.filtro.activo, .filtro:hover { background: var(--acento); color: #fff; }
+
+/* ---------- Tarjetas ---------- */
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem; width: 100%; max-width: 960px;
+}
+.card {
+  position: relative; background: var(--superficie); border: 1px solid var(--borde);
+  border-radius: 14px; padding: 1.5rem; opacity: 0;   /* estado inicial: oculta */
+}
+.card.oculta { display: none; }
+.icono { font-size: 2.2rem; }
+.card h2 { font-size: 1.1rem; margin: .6rem 0 .4rem; }
+.card p { font-size: .9rem; color: #6b5844; }
+.fav {
+  position: absolute; top: .8rem; right: .8rem; border: none; background: none;
+  font-size: 1.6rem; color: var(--acento); cursor: pointer;
+}
+
+.ayuda { font-size: .85rem; color: #6b5844; }
+kbd { background: var(--borde); padding: .1rem .4rem; border-radius: 4px; }

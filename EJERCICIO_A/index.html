@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedalea Pasto – Bicicletas eléctricas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Pedalea Pasto</h1>
+    <p>Alquila una bicicleta eléctrica y recorre la ciudad sin esfuerzo.</p>
+    <button class="uv-btn">Reservar ahora</button>
+  </header>
+
+  <section>
+    <h2>Nuestros planes</h2>
+    <div class="selector-plan">
+      <span>Mensual</span>
+      <label class="uv-switch">
+        <input type="checkbox" id="toggle-plan">
+        <span class="uv-slider"></span>
+      </label>
+      <span>Anual (-20%)</span>
+    </div>
+    <div class="tarjetas">
+      <div class="uv-card">
+        <h3>Urbano</h3>
+        <div class="precio" data-mensual="60000">$60.000</div>
+        <button class="uv-btn">Elegir</button>
+      </div>
+      <div class="uv-card">
+        <h3>Montaña</h3>
+        <div class="precio" data-mensual="95000">$95.000</div>
+        <button class="uv-btn">Elegir</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Recibe novedades</h2>
+    <div class="uv-input-grupo">
+      <input class="uv-input" id="correo" type="email" placeholder=" ">
+      <label for="correo">Tu correo</label>
+    </div>
+    <button class="uv-btn">Suscribirme</button>
+  </section>
+
+  <footer>
+    Componentes de Uiverse.io (licencia indicada en el sitio).
+    Créditos: botón – (autor, enlace) · card – (autor, enlace) · input – (autor, enlace) · toggle – (autor, enlace).
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
